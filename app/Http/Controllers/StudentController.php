@@ -11,7 +11,12 @@ class StudentController extends Controller
     {
         $data = (new BaseApi)->index('/api/students');
         $students = $data->json('data');
-        return view('students.index')->with('students' , $students['data']);
+
+        for ($i=0; $i < count($students); $i++) {
+            $students[$i]['image_path'] = env('API_HOST') . 'storage/' . $students[$i]['image'];
+        }
+
+        return view('students.index')->with('students' , $students);
     }
 
     public function create()
@@ -22,11 +27,16 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $payload = [
-            'nis' => $request->nis,
             'nama' => $request->nama,
-            'rombel' => $request->rombel,
-            'rayon' => $request->rayon,
+            'email' => $request->email,
             'tgl_lahir' => $request->tgl_lahir,
+            'no_tlpn' => $request->no_tlpn,
+            'linkedin' => $request->linkedin,
+            'instagram' => $request->instagram,
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'image' => $request->image,
+
            ];
 
            $baseApi = new BaseApi;
@@ -56,11 +66,15 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         $payload = [
-            'nis' => $request->nis,
             'nama' => $request->nama,
-            'rombel' => $request->rombel,
-            'rayon' => $request->rayon,
+            'email' => $request->email,
             'tgl_lahir' => $request->tgl_lahir,
+            'no_tlpn' => $request->no_tlpn,
+            'linkedin' => $request->linkedin,
+            'instagram' => $request->instagram,
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'image' => $request->images,
            ];
 
            $baseApi = new BaseApi;

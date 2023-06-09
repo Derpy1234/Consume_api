@@ -25,11 +25,15 @@
             <thead>
                 <tr>
                     <th class="text-center">No</th>
-                    <th>NIS</th>
                     <th>Nama</th>
-                    <th>Rombel</th>
-                    <th>Rayon</th>
-                    <th>Tanggal Lahir</th>
+                    <th>Email</th>
+                    <th>TGL LAHIR</th>
+                    <th>no tlpn</th>
+                    <th>linkedin</th>
+                    <th>instagram</th>
+                    <th>facebook</th>
+                    <th>twitter</th>
+                    <th>foto</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -37,11 +41,20 @@
                 @foreach($students as $value)
                 <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $value['nis'] }}</td>
                     <td>{{ $value['nama'] }}</td>
-                    <td>{{ $value['rombel'] }}</td>
-                    <td>{{ $value['rayon'] }}</td>
+                    <td>{{ $value['email'] }}</td>
                     <td>{{ $value['tgl_lahir'] }}</td>
+                    <td>{{ $value['no_tlpn'] }}</td>
+                    <td>{{ $value['linkedin'] }}</td>
+                    <td>{{ $value['instagram'] }}</td>
+                    <td>{{ $value['facebook'] }}</td>
+                    <td>{{ $value['twitter'] }}</td>
+                    <td>@if($value['image'] != NULL)
+                        <img src="{{ $value['image_path']}}" alt="" width="75px">
+                        @else
+                        <p>Tidak Ada Gambar</p>
+                        @endif
+                    </td>
                     <td>
                         <a href="/siswa/{{ $value['id'] }}" class="btn btn-primary"><i class="bi bi-eye-fill"></i></a>
                         <a href="/siswa/edit/{{ $value['id'] }}" class="btn btn-warning"><i class="bi bi-clipboard2-pulse-fill"></i></a>

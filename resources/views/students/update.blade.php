@@ -12,24 +12,40 @@
             @csrf
             @method('PATCH')
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">NIS</label>
-              <input type="text" class="form-control" name="nis" id="exampleInputEmail1" value="{{ $students['nis'] }}" aria-describedby="emailHelp">
+              <label for="exampleInputEmail1" class="form-label">Nama</label>
+              <input type="text" class="form-control" name="nama" id="exampleInputEmail1" value="{{ $students['nama'] }}" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Nama</label>
-              <input type="text" class="form-control" name="nama" value="{{ $students['nama'] }}" id="exampleInputPassword1">
+              <label for="exampleInputPassword1" class="form-label">Email</label>
+              <input type="text" class="form-control" name="email" value="{{ $students['email'] }}" id="exampleInputPassword1">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Rombel</label>
-                <input type="text" class="form-control" name="rombel" id="exampleInputPassword1" value="{{ $students['rombel'] }}">
+                <label for="exampleInputPassword1" class="form-label">Tanggal lahir</label>
+                <input type="date" class="form-control" name="tgl_lahir" id="exampleInputPassword1" value="{{ $students['tgl_lahir'] }}">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">NO HP</label>
+                <input type="number" class="form-control" name="no_tlpn" value="{{ $students['no_tlpn'] }}" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Linkedin</label>
+                <input type="text" class="form-control" name="linkedin" value="{{ $students['linkedin'] }}" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Instagram</label>
+                <input type="text" class="form-control" name="instagram" value="{{ $students['instagram'] }}" id="exampleInputPassword1">
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Rayon</label>
-                <input type="text" class="form-control" name="rayon" value="{{ $students['rayon'] }}" id="exampleInputPassword1">
+                <input type="text" class="form-control" name="facebook" value="{{ $students['facebook'] }}" id="exampleInputPassword1">
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
-                <input type="date" class="form-control" name="tgl_lahir" value="{{ $students['tgl_lahir'] }}" id="exampleInputPassword1">
+                <label for="exampleInputPassword1" class="form-label">Rayon</label>
+                <input type="text" class="form-control" name="twitter" value="{{ $students['twitter'] }}" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Rayon</label>
+                <input type="file" class="form-control" name="file" value="{{ $students['image'] }}" id="exampleInputPassword1">
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

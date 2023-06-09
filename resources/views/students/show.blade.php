@@ -12,25 +12,41 @@
             <fieldset disabled>
               <legend>DATA SISWA {{ $students['nama'] }}</legend>
               <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">NIS</label>
-                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['nis'] }}">
-              </div>
-              <div class="mb-3">
                 <label for="disabledTextInput" class="form-label">Nama</label>
                 <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['nama'] }}">
               </div>
               <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Rombel</label>
-                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['rombel'] }}">
-              </div>
-              <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Rayon</label>
-                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['rayon'] }}">
+                <label for="disabledTextInput" class="form-label">Email</label>
+                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['email'] }}">
               </div>
               <div class="mb-3">
                 <label for="disabledTextInput" class="form-label">Tanggal Lahir</label>
                 <input type="date" id="disabledTextInput" class="form-control" value="{{ $students['tgl_lahir'] }}">
               </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">No HP</label>
+                <input type="number" id="disabledTextInput" class="form-control" value="{{ $students['no_tlpn'] }}">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Rayon</label>
+                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['linkedin'] }}">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Instagram</label>
+                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['instagram'] }}">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Facebook</label>
+                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['facebook'] }}">
+              </div>              
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Teitter</label>
+                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['twitter'] }}">
+              </div>              
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Foto</label>
+                <input type="text" id="disabledTextInput" class="form-control" value="{{ $students['image'] }}">
+              </div>              
             </fieldset>
             <a href="/siswa" class="btn btn-primary">Back</a>
           </form>

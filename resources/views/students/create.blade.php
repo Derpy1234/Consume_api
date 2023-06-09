@@ -9,40 +9,45 @@
 </head>
 <body>
     <div class="container">
-        <div class="card d-block m-auto bg-warning p-4">
-        @if (Session::get('errors'))
-        <div class="alert alert-danger">
-            <ul>
-                    <li>{{Session::get('errors')}}</li>
+        <div class="card d-block m-auto bg-info p-4">
 
-            </ul>
-        </div>
-        @endif
             <form action="/siswa/store" method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">nis</label>
-                    <input type="text" name="nis" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1" class="form-label">Nama</label>
+                    <input type="text" name="nama" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">nama</label>
-                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                </div>
+                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <input type="text" name="email" class="form-control" id="exampleInputPassword1">
+                </div>                
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">rombel</label>
-                    <input type="text" name="rombel" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                </div>
+                    <label for="exampleInputPassword1" class="form-label">Tanggal Lahir</label>
+                    <input type="date" name="tgl_lahir" class="form-control" id="exampleInputPassword1">
+                </div>                
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">rayon</label>
-                    <input type="text" name="rayon" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                </div>
+                    <label for="exampleInputPassword1" class="form-label">No Hendphone</label>
+                    <input type="number" name="no_tlpn" class="form-control" id="exampleInputPassword1">
+                </div>                
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
-                    <input type="date" name="tgl_lahir" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
+                    <label for="exampleInputPassword1" class="form-label">linkedin</label>
+                    <input type="text" name="linkedin" class="form-control" id="exampleInputPassword1">
+                </div>                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">instagram</label>
+                    <input type="text" name="instagram" class="form-control" id="exampleInputPassword1">
+                </div>                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">facebook</label>
+                    <input type="text" name="facebook" class="form-control" id="exampleInputPassword1">
+                </div>              
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">twitter</label>
+                    <input type="text" name="twitter" class="form-control" id="exampleInputPassword1">
+                </div>                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">foto</label>
+                    <input type="file" name="file" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3 d-flex">
                     <button type="submit" class="btn btn-light">Send</button>

@@ -24,8 +24,8 @@ Route::get('/siswa/edit/{id}', [StudentController::class, 'edit']);
 Route::patch('/siswa/update/{id}', [StudentController::class, 'update']);
 Route::delete('/siswa/delete/{id}', [StudentController::class, 'destroy']);
 
-Route::get('/images', [ImageController::class, 'index']);
-Route::get('/images/create', [ImageController::class, 'create']);
-Route::post('/images/store', [ImageController::class, 'store']);
+// Route::get('/images', [ImageController::class, 'index']);
+// Route::get('/images/create', [ImageController::class, 'create']);
+// Route::post('/images/store', [ImageController::class, 'store']);
 
-Route::get('/albums', [AlbumController::class, 'index']);
+// Route::get('/albums', [AlbumController::class, 'index']);
